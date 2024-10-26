@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Trolex Investment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Great Vibes', cursive;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, lime, turquoise); /* Lime Green blending with Turquoise */
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 700px; /* Enlarged horizontally */
+            height: 300px; /* Reduced vertically */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #1E90FF; /* Bluish Green */
+            text-align: center;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+        .service {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #1E90FF; /* Bluish Green */
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .service:hover {
+            background-color: rgba(30, 144, 255, 0.1); /* Light Blue on hover */
+        }
+        .service h2 {
+            font-size: 32px; /* Enlarged service title */
+            color: #1E90FF; /* Bluish Green */
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 28px; /* Enlarged explanation */
+        }
+        .read-more {
+            color: #1E90FF; /* Bluish Green */
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            background: linear-gradient(to right, lime, turquoise); /* Lime Green blending with Turquoise */
+            color: white;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+		.modal-content h2 {
+            font-size: 2em; /* Increased size for the modal header */
+        }
+		.modal-content p {
+            font-size: 1.5em; /* Enlarged font size for the paragraph text */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Trolex Logo.jpeg" alt="Trolex Investment Logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Our Services</h1>
+
+    <div class="service">
+        <h2>1. Immigration and Labor Application Services</h2>
+        <p>We facilitate applications for permanent residence, emergency work permits, and emergency short-term and long-term permits.</p>
+        <span class="read-more" onclick="openModal('modal1')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>2. Online OBRS Company Registration</h2>
+        <p>Assistance with company/business registration and deregistration through the Online Business Registration System (OBRS).</p>
+        <span class="read-more" onclick="openModal('modal2')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>3. Annual Return Payments</h2>
+        <p>We help businesses with their annual return payments, ensuring compliance with local regulations.</p>
+        <span class="read-more" onclick="openModal('modal3')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>4. Director/Shareholder Changes</h2>
+        <p>We assist with changes to company directors and shareholders to maintain accurate records.</p>
+        <span class="read-more" onclick="openModal('modal4')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>5. Appointment of Company Secretary</h2>
+        <p>Guidance on the appointment of a company secretary to ensure compliance with corporate governance.</p>
+        <span class="read-more" onclick="openModal('modal5')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>6. Bank Account Opening</h2>
+        <p>We provide assistance with opening bank accounts for companies and businesses.</p>
+        <span class="read-more" onclick="openModal('modal6')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>7. Bookkeeping and Accounting</h2>
+        <p>We offer bookkeeping and accounting services to ensure proper financial management.</p>
+        <span class="read-more" onclick="openModal('modal7')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>8. Tax Clearance Application</h2>
+        <p>We help clients with tax clearance applications for compliance and regulatory purposes.</p>
+        <span class="read-more" onclick="openModal('modal8')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>9. Financial Work/Accountants</h2>
+        <p>We assist with financial work and connect clients with accountants for tax payments.</p>
+        <span class="read-more" onclick="openModal('modal9')">Read More</span>
+    </div>
+
+    <div class="service">
+        <h2>10. Assistance for Loans/Grants</h2>
+        <p>We assist with applications for loans and grants from organizations like CEDA and Gender Affairs.</p>
+        <span class="read-more" onclick="openModal('modal10')">Read More</span>
+    </div>
+
+    <!-- Modal Structure -->
+    <!-- Modal for Application for Permits -->
+	<div id="modal1" class="modal">
+	    <div class="modal-content">
+	        <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Application for Permits</h2>
+            <p>This includes applications for permanent residence, emergency work permits, short-term, and long-term permits.</p>
+            <p><strong>Citizenship:</strong> This is for people who have resided in Botswana for the past ten years with no break. For example, having ten residential and work permits for the previous years and would like to become a citizen.</p>
+            <p><strong>Short Term Permits:</strong> Commonly known as emergency work permits, they range from:</p>
+            <ul>
+               <li>One (1) day to fourteen days</li>
+               <li>Fourteen days to three months</li>
+            </ul>
+            <p><strong>Long Term Permits:</strong> This permit duration is from four (4) months to five (5) years.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Online OBRS Company Registration</h2>
+            <p>We provide a comprehensive guide and support for businesses looking to register or deregister via the Online Business Registration System. Our services include preparing necessary documentation and ensuring compliance with local laws.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Annual Return Payments</h2>
+            <p>We remind and assist businesses in making their annual return payments on time, helping to avoid penalties and maintain good standing with regulatory bodies.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Director/Shareholder Changes</h2>
+            <p>Our experts help businesses manage changes in directors and shareholders, ensuring that all changes are properly documented and filed with the relevant authorities.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Appointment of Company Secretary</h2>
+            <p>We guide businesses through the process of appointing a company secretary, including their roles, responsibilities, and compliance requirements.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>Bank Account Opening</h2>
+            <p>We provide the necessary documentation and advice to facilitate the opening of bank accounts for businesses, ensuring compliance with banking regulations.</p>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h2>Bookkeeping and Accounting</h2>
+            <p>We offer professional bookkeeping and accounting services tailored to meet the needs of small and medium-sized enterprises.</p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h2>Tax Clearance Application</h2>
+            <p>We assist clients in preparing and submitting tax clearance applications, ensuring all necessary documents are in order for compliance.</p>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h2>Financial Work/Accountants</h2>
+            <p>We connect clients with qualified accountants and provide support for their financial work, ensuring all tax obligations are met.</p>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <h2>Assistance for Loans/Grants</h2>
+            <p>We guide clients through the process of applying for loans and grants from various organizations, providing support at every step.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Trolex Investment. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
